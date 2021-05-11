@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: node-webservice
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: node-webservice
+  template:
+    metadata:
+      labels:
+        app: node-webservice
+    spec:
+      containers:
+      - name: node-webservice
+        image: waynefoux/node-web-app:latest 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: node-webservice-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    app: node-webservice
+  ports:
+  - port: 8080
+    nodePort: 30000
