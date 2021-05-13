@@ -8,6 +8,17 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "express": "^4.16.1"
-  }
+    "express": "^4.17.1",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/waynefoux/node-web-service.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/waynefoux/node-web-service/issues"
+  },
+  "homepage": "https://github.com/waynefoux/node-web-service#readme"
 }

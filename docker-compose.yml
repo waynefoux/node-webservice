@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    node-web-app:
+        image: waynefoux/node-web-app:latest
+        ports:
+            - "8080:8080"
+        environment:
+            - MYSQL_ALLOW_EMPTY_PASSWORD=yes
+    redis:
+        image: redis:5.0
+        ports:
+            - "6379:6379"
